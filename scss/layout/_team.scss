@@ -1,0 +1,123 @@
+.team_content {
+  width: 100%;
+
+  .team_img {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .team_info {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      width: 70%;
+      text-align: right;
+      padding: $p-0 $p-2;
+      background-color: $color-black-2;
+
+      h5 {
+        margin: 0;
+        font-size: $fs-0;
+        color: $color-white-0;
+      }
+      p {
+        margin: 0;
+        font-size: $fs-1 -1;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    .team_hover {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-white-0;
+      z-index: 2;
+      border: 20px solid $color-white-2;
+      text-align: center;
+      opacity: 0;
+      transition: 0.5s;
+      &:hover {
+        opacity: 1;
+        .team_text {
+          top: 20%;
+        }
+        .team_icon {
+          bottom: 10%;
+          font-size: $fs-0 - 1;
+        }
+      }
+      .team_text {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        transition: 0.5s;
+        font-size: $fs-0 - 1;
+        line-height: 1.5;
+
+        p {
+          font-size: $fs-0 - 1;
+          line-height: 30px;
+          margin: 0 0 30px;
+          color: $color-black-1;
+        }
+      }
+      .team_icon {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        transition: 0.5s;
+        i {
+          margin: 0 15px;
+          &:hover {
+            color: $color-yelow-0;
+          }
+        }
+      }
+    }
+  }
+  .team_join {
+    margin-top: 100px;
+    padding: 40px;
+    width: 100%;
+    background-color: $color-gray-0;
+
+    div {
+      color: $color-black-0;
+
+      letter-spacing: 1px;
+      line-height: 1.5;
+
+      span {
+        color: $color-yelow-0;
+      }
+    }
+    p {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .team_button {
+      outline: none;
+      background-color: $color-black-9;
+      border: none;
+      padding: $p-1 $p-3;
+      color: $color-white-0;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .team_join {
+    .team_button {
+      margin-top: 30px;
+    }
+  }
+}

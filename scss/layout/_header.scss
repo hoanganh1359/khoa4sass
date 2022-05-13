@@ -1,0 +1,132 @@
+header {
+  position: relative;
+  .my_navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 85px;
+    display: inline-block;
+    padding: 0 $p-3;
+    text-transform: uppercase;
+    z-index: 3;
+    background-color: $color-black-6;
+    img {
+      max-height: 100%;
+      padding: 2px 0;
+      width: 62px;
+      height: 60px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+      max-height: 400px;
+
+      .nav-item {
+        .nav-link {
+          color: $color-white-1;
+          font-size: $fs-1;
+          font-weight: $fw-4;
+          padding: 0 $p-0 + 2;
+          letter-spacing: 0.5px;
+          line-height: 60px;
+          &.active {
+            color: $color-yelow-0;
+          }
+          &:hover {
+            color: $color-yelow-0;
+          }
+        }
+        .nav-content {
+          &::after {
+            content: "";
+            border-right: 1px solid $color-white-1;
+            padding: 0 $p-0 + 2;
+          }
+        }
+      }
+    }
+    .navbar-toggler {
+      border: 0px;
+      border: transparent;
+      outline: none !important;
+      &:focus {
+        border: transparent;
+        outline: none !important;
+      }
+      .navbar-toggler-icon {
+        color: $color-white-1;
+        background-color: transparent;
+        border: transparent;
+      }
+    }
+  }
+  .header_content {
+    background-image: url(../img/index-banner-2.jpg);
+    width: 100%;
+    height: 584px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .header_item {
+      color: $color-white-0;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      h1 {
+        font-size: $p-4;
+        letter-spacing: 5px;
+        font-weight: $fw-5;
+      }
+      h3 {
+        font-size: $fs-3 + 2;
+        letter-spacing: 6px;
+      }
+    }
+  }
+}
+header {
+  #backgroud {
+    background-color: transparent;
+  }
+}
+
+@include responsive("large") {
+  .my_navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        background-color: $color-white-1;
+        .nav-item {
+          border-bottom: 1px solid #f0f0f0;
+          .nav-link {
+            color: $color-black-9;
+          }
+        }
+      }
+    }
+  }
+  .header_content {
+    .header_item {
+      width: 100%;
+    }
+  }
+}
+@include responsive("medium") {
+  header {
+    .header_content {
+      .header_item {
+        width: 100%;
+        h1 {
+          font-size: 30px;
+          letter-spacing: 5px;
+          font-weight: 300;
+        }
+        h3 {
+          font-size: 18px;
+          letter-spacing: 6px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

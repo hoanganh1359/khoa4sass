@@ -1,0 +1,33 @@
+@mixin page_content {
+  padding: 100px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+@mixin responsive($screen) {
+  @if map-has-key($map: $breakPoints, $key: $screen) {
+    $value: map-get(
+      $map: $breakPoints,
+      $key: $screen,
+    );
+    @media screen and(max-width:$value) {
+      @content;
+    }
+  } @else {
+    @warn "`{$screen}` isn't exit in breakpoints";
+  }
+}
+
+@mixin responsive($screen) {
+  @if map-has-key($map: $breakPoints, $key: $screen) {
+    $value: map-get(
+      $map: $breakPoints,
+      $key: $screen,
+    );
+    @media screen and(max-width:$value) {
+      @content;
+    }
+  } @else {
+    @warn "`$screen` isn't exit in breakpoints";
+  }
+}

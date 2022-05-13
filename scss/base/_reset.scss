@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $color-black-0;
+  font-size: $fs-0;
+  letter-spacing: 1px;
+  font-weight: $fw-0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  a {
+    text-decoration: none;
+  }
+}
+::selection {
+  color: $color-white-0;
+  background-color: $color-yelow-0;
+}

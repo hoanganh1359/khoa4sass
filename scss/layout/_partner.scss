@@ -1,0 +1,14 @@
+.partner {
+  .partner_content {
+    padding: 100px;
+    border-top: 1px solid $color-gray-0;
+    text-align: center;
+    .partner_item {
+      width: 100%;
+      text-align: center;
+      img {
+        width: auto;
+      }
+    }
+  }
+}
